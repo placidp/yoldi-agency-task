@@ -1,0 +1,6 @@
+export * from '../ui-kit/Avatar/index'
+export * from './UploadImage/index'
+export * from '../ui-kit/Button/index'
+export * from './Footer/index'
+export * from './Header/index'
+export * from './Input/index'

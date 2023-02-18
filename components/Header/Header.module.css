@@ -1,0 +1,39 @@
+.root {
+	border-bottom: var(--border-radius) solid var(--white-3);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logoGroup {
+	max-width: 360px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	margin: 15px 20px;
+	cursor: pointer;
+}
+
+.userGroup {
+	min-width: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	/* border: 1px solid red; */
+
+	/* padding: 7px 33px; */
+
+	margin: 15px 29.5px;
+}
+
+.userGroup:has(:only-child) {
+	/* background-color: red !important; */
+	/* justify-content: end; */
+}

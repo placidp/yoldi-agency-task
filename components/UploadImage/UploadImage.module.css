@@ -1,0 +1,31 @@
+.root {
+	transition: all 0.2s;
+
+	/* hide input */
+	opacity: 0;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.root[data-show] {
+	opacity: 1;
+}
+
+.button {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.iconBox {
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+.iconBox[data-show] {
+	opacity: 1;
+}

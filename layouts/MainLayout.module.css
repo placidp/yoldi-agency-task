@@ -1,0 +1,19 @@
+.root {
+	display: grid;
+	min-height: 100vh;
+	grid-template-rows: 80px 1fr;
+}
+
+.content {
+	display: grid;
+	place-items: center;
+}
+
+.root > :first-child {
+	display: grid;
+	min-height: 80px;
+}
+
+.root > :nth-child(2) {
+	display: grid;
+}
