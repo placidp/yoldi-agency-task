@@ -116,6 +116,7 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 				<Input
 					onChange={(e) => nameHandler(e)}
 					onBlur={(e) => blurHandler(e)}
+					onFocus={() => setNameDirty(true)}
 					value={name}
 					placeholder='Имя'
 					type='text'
@@ -128,11 +129,12 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 				<Input
 					onChange={(e) => emailHandler(e)}
 					onBlur={(e) => blurHandler(e)}
+					onFocus={() => setEmailDirty(true)}
 					value={email}
 					placeholder='E-mail'
 					type='email'
 					name='email'
-					borderColor={nameError && nameDirty ? 'red' : 'currentColor'}
+					borderColor={emailError && emailDirty ? 'red' : 'currentColor'}
 					iconLeft={<Envelope color={emailError && emailDirty ? 'red' : 'currentColor'} />}
 				/>
 			</div>
@@ -140,11 +142,12 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 				<Input
 					onChange={(e) => passwordHandler(e)}
 					onBlur={(e) => blurHandler(e)}
+					onFocus={() => setPasswordDirty(true)}
 					value={password}
 					placeholder='Пароль'
 					type={passwordType}
 					name='password'
-					borderColor={nameError && nameDirty ? 'red' : 'currentColor'}
+					borderColor={passwordError && passwordDirty ? 'red' : 'currentColor'}
 					iconLeft={<Lock color={passwordError && passwordDirty ? 'red' : 'currentColor'} />}
 					iconRight={<Eye color={isPasswordVisible ? 'black' : 'currentColor'} />}
 					onClick={toggleShowPassword}

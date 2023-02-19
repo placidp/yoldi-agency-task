@@ -1,15 +1,15 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 export default function Home(): JSX.Element {
-	const router = useRouter();
+	const router = useRouter()
 
 	useEffect(() => {
-		const { pathname } = router;
-		if (pathname === "/") {
-			router.push("/register");
+		const { pathname } = router
+		if (pathname === '/') {
+			router.push('/accounts-list/1')
 		}
-	}, [router]);
+	}, [router])
 
-	return <></>;
+	return <></>
 }
