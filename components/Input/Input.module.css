@@ -1,14 +1,46 @@
 .root {
+}
+
+.input {
 	width: 330px;
 	height: 50px;
+	padding: 12px 20px;
+
 	border: var(--border-radius) solid var(--grey-2);
 	border-radius: var(--border-radius-button);
-	padding: 12px 20px;
 
 	font-size: 16px;
 }
 
-.root:focus-visible,
-.root:active {
+.input:focus-visible,
+.input:active {
 	outline: var(--border-radius) solid var(--grey-3);
+}
+
+.iconLeft,
+.iconRight {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	user-select: none;
+}
+
+.iconLeft {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+}
+
+.iconRight {
+	top: 25%;
+	right: 20px;
+	color: var(--grey-2);
+
+	cursor: pointer;
+
+	transition: all 0.2s;
 }

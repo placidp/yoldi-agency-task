@@ -29,5 +29,17 @@
 .uploadImage:hover {
 	cursor: pointer;
 	background-color: var(--black);
-	color: var(--white);
+	background-image: url('/assets/icons/camera.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: animatedBackground 0.2s;
+}
+
+@keyframes animatedBackground {
+	from {
+		background-position: 50% 0;
+	}
+	to {
+		background-position: 50% 50%;
+	}
 }

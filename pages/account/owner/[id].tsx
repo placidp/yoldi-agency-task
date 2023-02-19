@@ -1,13 +1,20 @@
-import { FC } from 'react'
 import Image from 'next/image'
 
 import { MainLayout } from '@/layouts/MainLayout'
-import { Button, Avatar } from '@/components'
-
-import styles from './Owner.module.css'
+import { Button, UploadableAvatar } from '@/components'
 import { Cover, Upload } from '@/public/assets/icons'
 
-const Owner = () => {
+import styles from './Owner.module.css'
+import { useState } from 'react'
+
+const fullname = 'Владислав'
+
+const Owner = (): JSX.Element => {
+	const handleImageUpload = (image: File) => {
+		console.log('Image uploaded:', image)
+		// send the image to the server, etc.
+	}
+
 	return (
 		<MainLayout>
 			<div className={styles.root}>
@@ -21,10 +28,10 @@ const Owner = () => {
 				<main className={styles.main}>
 					<div className={styles.wrapper}>
 						<div className={styles.avatar}>
-							<Avatar fullname={'Владислав'} size={'large'} uploadImage={true} />
+							<UploadableAvatar fullname={fullname} size='large' upload onImageUpload={handleImageUpload} />
 						</div>
 						<div className={styles.personalInfo}>
-							<span className={styles.name}>{'Владислав'}</span>
+							<span className={styles.name}>{fullname}</span>
 							<span className={styles.email}>example@gmail.com</span>
 							<div className={styles.edit}>
 								<Button appearance='secondary' size='small' className={styles.button}>

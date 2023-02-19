@@ -6,9 +6,7 @@ interface LayoutWithFooterProps {
 	children: React.ReactNode
 }
 
-export const LayoutWithFooter: React.FC<LayoutWithFooterProps> = ({
-	children,
-}) => {
+export const LayoutWithFooter: React.FC<LayoutWithFooterProps> = ({ children }) => {
 	return (
 		<main className={styles.root}>
 			<Header />

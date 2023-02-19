@@ -1,28 +1,29 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
-
+import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from 'react'
 import cn from 'classnames'
-
 import { Initials } from '@/ui-kit/Initials'
 
 import styles from './Avatar.module.css'
+import { UploadImage } from '@/components'
+import AvatarImage from '@/components/AvatarImage'
 
-interface AvatarProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+export interface AvatarProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
 	fullname: string
 	size: 'small' | 'large'
-	uploadImage?: boolean
+	upload: boolean
 }
 
-export const Avatar = ({ fullname, size, uploadImage = false, ...props }: AvatarProps) => {
+export const Avatar = ({ fullname, size, upload, ...props }: AvatarProps): JSX.Element => {
+	const imgUrl = ''
+
 	return (
 		<button
 			className={cn(styles.root, {
 				[styles.small]: size == 'small',
 				[styles.large]: size == 'large',
-				[styles.uploadImage]: uploadImage == true,
+				[styles.uploadImage]: upload,
 			})}
 			{...props}>
-			<Initials fullname={fullname} />
-			{/* {uploadImage && <UploadImage show={false} />} */}
+			{imgUrl ? <AvatarImage size={size} /> : <Initials fullname={fullname} />}
 		</button>
 	)
 }
