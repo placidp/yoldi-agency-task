@@ -10,16 +10,35 @@ interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 	type: string
 	name: string
 	onClick?: () => void
+	borderColor?: string
 }
 
-export const Input = ({ iconLeft, iconRight, placeholder, type, name, onClick, ...props }: InputProps): JSX.Element => {
+export const Input = ({
+	iconLeft,
+	iconRight,
+	placeholder,
+	type,
+	name,
+	onClick,
+	borderColor,
+	...props
+}: InputProps): JSX.Element => {
 	return (
 		<div className={styles.root}>
-			<input className={cn(styles.input, {})} placeholder={placeholder} type={type} name={name} {...props} />
+			<input
+				className={cn(styles.input, {
+					[styles.red]: borderColor === 'red',
+				})}
+				placeholder={placeholder}
+				type={type}
+				name={name}
+				{...props}
+			/>
 			{iconLeft && <span className={styles.iconLeft}>{iconLeft}</span>}
 			{iconRight && (
 				<span className={styles.iconRight} onClick={onClick}>
 					{iconRight}
+					{}
 				</span>
 			)}
 		</div>

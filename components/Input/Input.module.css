@@ -44,3 +44,12 @@
 
 	transition: all 0.2s;
 }
+
+.iconRight:hover {
+	transform: scale(1.1);
+	filter: invert(20%);
+}
+
+.red {
+	border-color: red;
+}

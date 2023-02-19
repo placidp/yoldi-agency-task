@@ -113,7 +113,6 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 				Регистрация <br /> в Yoldi Agency
 			</h2>
 			<div className={styles.inputGroup}>
-				{nameError && nameDirty && <div style={{ color: 'red' }}>{nameError}</div>}
 				<Input
 					onChange={(e) => nameHandler(e)}
 					onBlur={(e) => blurHandler(e)}
@@ -121,11 +120,11 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 					placeholder='Имя'
 					type='text'
 					name='name'
-					iconLeft={<User />}
+					borderColor={nameError && nameDirty ? 'red' : 'currentColor'}
+					iconLeft={<User color={nameError && nameDirty ? 'red' : 'currentColor'} />}
 				/>
 			</div>
 			<div className={styles.inputGroup}>
-				{emailError && emailDirty && <div style={{ color: 'red' }}>{emailError}</div>}
 				<Input
 					onChange={(e) => emailHandler(e)}
 					onBlur={(e) => blurHandler(e)}
@@ -133,11 +132,11 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 					placeholder='E-mail'
 					type='email'
 					name='email'
-					iconLeft={<Envelope />}
+					borderColor={nameError && nameDirty ? 'red' : 'currentColor'}
+					iconLeft={<Envelope color={emailError && emailDirty ? 'red' : 'currentColor'} />}
 				/>
 			</div>
 			<div className={styles.inputGroup}>
-				{passwordError && passwordDirty && <div style={{ color: 'red' }}>{passwordError}</div>}
 				<Input
 					onChange={(e) => passwordHandler(e)}
 					onBlur={(e) => blurHandler(e)}
@@ -145,8 +144,9 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 					placeholder='Пароль'
 					type={passwordType}
 					name='password'
-					iconLeft={<Lock />}
-					iconRight={<Eye />}
+					borderColor={nameError && nameDirty ? 'red' : 'currentColor'}
+					iconLeft={<Lock color={passwordError && passwordDirty ? 'red' : 'currentColor'} />}
+					iconRight={<Eye color={isPasswordVisible ? 'black' : 'currentColor'} />}
 					onClick={toggleShowPassword}
 				/>
 			</div>
