@@ -7,36 +7,34 @@ import { HeaderProps } from './Header.props'
 import styles from './Header.module.css'
 import cn from 'classnames'
 
-export const Header = ({ ...props }: HeaderProps): JSX.Element => {
+export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	const name = 'Владислав'
 	const isLogged = true
 
 	return (
-		<header className={styles.root} {...props}>
-			<div className={styles.wrapper}>
-				<div className={styles.logoGroup}>
-					<Link href='/accounts'>
-						<Image className={styles.logo} src='/yoldi.svg' alt='Yoldi Logo' width={80} height={50} priority />
-					</Link>
-					<p>Разрабатываем и запускаяем сложные веб проекты</p>
-				</div>
+		<header className={cn(className, styles.header)} {...props}>
+			{/* <div className={styles.userGroup}> */}
+			<Link href='/accounts'>
+				<Image className={styles.logo} src='/yoldi.svg' alt='Yoldi Logo' width={80} height={50} priority />
+			</Link>
+			<p className={styles.motto}>Разрабатываем и запускаяем сложные веб проекты</p>
+			{/* </div> */}
 
-				<div className={styles.userGroup}>
-					{isLogged ? (
-						<>
-							<p className='name'>{name}</p>
-							<Link href={'/account/owner/1'}>
-								<Avatar size='small' fullname={name} />
-							</Link>
-						</>
-					) : (
-						<>
-							<Button appearance='secondary' size='medium'>
-								Войти
-							</Button>
-						</>
-					)}
-				</div>
+			<div className={styles.userGroup}>
+				{isLogged ? (
+					<>
+						<p className={styles.name}>{name}</p>
+						<Link href={'/account/owner/1'}>
+							<Avatar className={styles.avatar} size='small' fullname={name} />
+						</Link>
+					</>
+				) : (
+					<>
+						<Button appearance='secondary' size='medium'>
+							Войти
+						</Button>
+					</>
+				)}
 			</div>
 		</header>
 	)

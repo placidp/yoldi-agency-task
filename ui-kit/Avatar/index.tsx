@@ -12,12 +12,12 @@ export interface AvatarProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTML
 	upload?: boolean
 }
 
-export const Avatar = ({ fullname, size, upload, ...props }: AvatarProps): JSX.Element => {
+export const Avatar = ({ className, fullname, size, upload, ...props }: AvatarProps): JSX.Element => {
 	const imgUrl = ''
 
 	return (
 		<button
-			className={cn(styles.root, {
+			className={cn(className, styles.root, {
 				[styles.small]: size == 'small',
 				[styles.large]: size == 'large',
 				[styles.uploadImage]: upload,

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { FooterProps } from './Footer.props'
@@ -12,7 +11,8 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
 			<div className={styles.wrapper}>
 				{mock ? (
 					<p>
-						<span className='text-gray'>Уже есть аккаунт?</span> <Link href={'/login'}>Войти</Link>
+						<span className='text-gray'>Уже есть аккаунт? </span>
+						<Link href={'/login'}>Войти</Link>
 					</p>
 				) : (
 					<p>
