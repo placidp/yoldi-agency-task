@@ -1,7 +1,7 @@
 import { SyntheticEvent, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { Button, Input } from '@/components'
+import { Button, Htag, Input } from '@/components'
 import { User, Lock, Envelope, Eye } from '@/public/assets/icons'
 
 import styles from './RegisterForm.module.css'
@@ -109,9 +109,9 @@ export const RegisterForm = ({ setIsLoading }: RegistrFormProps): JSX.Element =>
 
 	return (
 		<form className={styles.form} onSubmit={onSubmit}>
-			<h2 className={styles.title}>
+			<Htag tag='h2'>
 				Регистрация <br /> в Yoldi Agency
-			</h2>
+			</Htag>
 			<div className={styles.inputGroup}>
 				<Input
 					onChange={(e) => nameHandler(e)}

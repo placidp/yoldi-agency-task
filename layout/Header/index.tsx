@@ -13,12 +13,10 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 
 	return (
 		<header className={cn(className, styles.header)} {...props}>
-			{/* <div className={styles.userGroup}> */}
 			<Link href='/accounts'>
 				<Image className={styles.logo} src='/yoldi.svg' alt='Yoldi Logo' width={80} height={50} priority />
 			</Link>
 			<p className={styles.motto}>Разрабатываем и запускаяем сложные веб проекты</p>
-			{/* </div> */}
 
 			<div className={styles.userGroup}>
 				{isLogged ? (

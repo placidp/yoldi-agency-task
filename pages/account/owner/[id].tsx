@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { withLayout } from '@/layout'
-import { Button, UploadableAvatar } from '@/components'
+import { Button, Htag, UploadableAvatar } from '@/components'
 import { Cover, Upload } from '@/public/assets/icons'
 import Head from 'next/head'
 
@@ -36,7 +36,7 @@ const Owner = (): JSX.Element => {
 							<UploadableAvatar fullname={fullname} size='large' upload onImageUpload={handleImageUpload} />
 						</div>
 						<div className={styles.personalInfo}>
-							<span className={styles.name}>{fullname}</span>
+							<Htag tag='h2'>{fullname}</Htag>
 							<span className={styles.email}>example@gmail.com</span>
 							<div className={styles.edit}>
 								<Button appearance='secondary' size='small' className={styles.button}>

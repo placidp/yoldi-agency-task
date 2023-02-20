@@ -1,8 +1,11 @@
-.root {
-	display: grid;
-	align-content: center;
-	grid-template-rows: 42px 1fr;
-	row-gap: 30px;
+.wrapper {
+}
+
+.title {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 140%;
+	margin-bottom: 30px;
 }
 
 .row {
@@ -18,13 +21,6 @@
 	border-bottom: var(--border-radius) solid var(--white-3);
 }
 
-.title {
-	/* align-self: center; */
-	font-weight: 500;
-	font-size: 30px;
-	line-height: 140%;
-}
-
 .list {
 }
 
@@ -33,4 +29,5 @@
 
 .email {
 	justify-self: end;
+	color: var(--grey-3);
 }

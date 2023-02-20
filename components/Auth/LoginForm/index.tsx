@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { Button, Input } from '@/components'
+import { Button, Htag, Input } from '@/components'
 import { Lock, Envelope, Eye } from '@/public/assets/icons'
 
 import styles from './LoginForm.module.css'
@@ -83,7 +83,9 @@ export const LoginForm = ({ setIsLoading }: LoginFormProps): JSX.Element => {
 	}
 	return (
 		<form className={styles.form} onSubmit={handleSubmit}>
-			<h2 className={styles.title}>Вход в Yoldi Agency</h2>
+			<Htag tag='h2' className={styles.title}>
+				Вход в Yoldi Agency
+			</Htag>
 
 			<div className={styles.inputGroup}>
 				<Input

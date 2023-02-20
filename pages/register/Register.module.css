@@ -1,7 +1,4 @@
 .root {
-	min-width: 400px;
-	/* height: 424px; */
-	border: var(--border-radius) solid var(--white-3);
-
 	background-color: var(--white);
+	border: var(--border-radius) solid var(--white-3);
 }

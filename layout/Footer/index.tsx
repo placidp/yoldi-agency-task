@@ -5,11 +5,11 @@ import styles from './Footer.module.css'
 import cn from 'classnames'
 
 export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
-	const mock = true
+	const isLoggedMock = false
 	return (
 		<footer className={cn(className, styles.footer)} {...props}>
 			<div className={styles.wrapper}>
-				{mock ? (
+				{isLoggedMock ? (
 					<p>
 						<span className='text-gray'>Уже есть аккаунт? </span>
 						<Link href={'/login'}>Войти</Link>
