@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { RegisterForm } from '@/components'
 
 import styles from './Register.module.css'
-import { withLayout } from '@/layout'
+import { withAuthLayout } from '@/layouts/AuthLayout'
 
 const Register = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -17,11 +17,11 @@ const Register = () => {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<div className={styles.root}>
+			<div className={styles.wrapper}>
 				<RegisterForm setIsLoading={setIsLoading} />
 			</div>
 		</>
 	)
 }
 
-export default withLayout(Register)
+export default withAuthLayout(Register)

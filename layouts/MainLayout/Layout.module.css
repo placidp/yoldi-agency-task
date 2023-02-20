@@ -1,0 +1,40 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr minmax(320px, 800px) 1fr;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100dvh;
+	grid-template-areas:
+		'header header header'
+		'. body .'
+		'footer footer footer';
+}
+
+.header {
+	grid-area: header;
+}
+.body {
+	grid-area: body;
+}
+.footer {
+	grid-area: footer;
+}
+
+@media (max-width: 765px) {
+	.wrapper {
+		grid-template-columns: minmax(320px, 1fr);
+		grid-template-areas:
+			'header'
+			'body'
+			'footer';
+	}
+}
+
+.auth {
+	display: grid;
+	/* place-items: center; */
+	background-color: var(--white-2);
+}
+
+.wrapper:has(.auth) .auth {
+	background-color: red;
+}

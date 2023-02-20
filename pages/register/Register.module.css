@@ -1,4 +1,11 @@
-.root {
+.wrapper {
 	background-color: var(--white);
 	border: var(--border-radius) solid var(--white-3);
+}
+
+@media (max-width: 565px) {
+	.wrapper {
+		background-color: initial;
+		border: initial;
+	}
 }

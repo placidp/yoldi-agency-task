@@ -1,11 +1,8 @@
 .wrapper {
-}
+	display: grid;
+	gap: 30px;
 
-.title {
-	font-weight: 500;
-	font-size: 30px;
-	line-height: 140%;
-	margin-bottom: 30px;
+	margin-top: 50px;
 }
 
 .row {
@@ -19,12 +16,6 @@
 }
 .row:last-child {
 	border-bottom: var(--border-radius) solid var(--white-3);
-}
-
-.list {
-}
-
-.name {
 }
 
 .email {

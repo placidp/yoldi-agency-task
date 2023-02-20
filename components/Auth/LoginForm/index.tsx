@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { Button, Htag, Input } from '@/components'
+import { Button, Htag, Input } from '@/ui-kit'
 import { Lock, Envelope, Eye } from '@/public/assets/icons'
 
 import styles from './LoginForm.module.css'

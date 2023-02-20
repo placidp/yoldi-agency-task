@@ -4,7 +4,7 @@ interface InitialsProps {
 	fullname: string
 }
 
-export const Initials = ({ fullname }: InitialsProps) => {
+export const Initials = ({ fullname }: InitialsProps): JSX.Element => {
 	const getInitials = useCallback(
 		(name: string): string => {
 			return name

@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from 'react'
 import cn from 'classnames'
-import { Initials } from '@/ui-kit/Initials'
+import { Initials } from '@/components/Initials'
 
 import styles from './Avatar.module.css'
 import { UploadImage } from '@/components'

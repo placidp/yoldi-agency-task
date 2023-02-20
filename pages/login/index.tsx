@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { LoginForm } from '@/components'
-import { withLayout } from '@/layout'
+import { withAuthLayout } from '@/layouts/AuthLayout'
 import Head from 'next/head'
 
 import styles from './Login.module.css'
@@ -24,4 +24,4 @@ const Login = ({ ...props }): JSX.Element => {
 	)
 }
 
-export default withLayout(Login)
+export default withAuthLayout(Login)

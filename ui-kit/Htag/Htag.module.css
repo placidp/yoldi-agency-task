@@ -1,0 +1,17 @@
+.h1 {
+	/* future-proofing 😎*/
+}
+
+.h2 {
+	font-size: 30px;
+	line-height: 42px;
+	font-weight: 500;
+}
+
+.h3 {
+	/* future-proofing */
+}
+
+.h4 {
+	/* future-proofing */
+}

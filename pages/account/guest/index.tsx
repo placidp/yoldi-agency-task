@@ -1,4 +1,4 @@
-import { withLayout } from '@/layout'
+import { withLayout } from '@/layouts/MainLayout'
 import Head from 'next/head'
 
 import styles from './Guest.module.css'

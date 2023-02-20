@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { withLayout } from '@/layout'
-import { Avatar, Htag } from '@/components'
+import { withMainLayout } from '@/layouts/MainLayout'
+import { Avatar, Htag } from '@/ui-kit'
 
 import styles from './Accounts.module.css'
 
@@ -38,4 +38,4 @@ const AccountsList = (): JSX.Element => {
 	)
 }
 
-export default withLayout(AccountsList)
+export default withMainLayout(AccountsList)

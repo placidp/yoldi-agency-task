@@ -1,0 +1,5 @@
+export * from '../ui-kit/Avatar/index'
+export * from '../ui-kit/Button/index'
+export * from '../ui-kit/Input/index'
+export * from '../ui-kit/Htag/index'
+export * from '../ui-kit/P/index'

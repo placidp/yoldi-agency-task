@@ -1,0 +1,15 @@
+.p {
+	font-size: 16px;
+	line-height: 160%;
+	font-style: normal;
+	color: var(--black);
+	font-family: var(--font-inter);
+}
+
+.s {
+	font-weight: 400;
+}
+
+.m {
+	font-weight: 500;
+}

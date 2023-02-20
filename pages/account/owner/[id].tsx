@@ -1,16 +1,18 @@
 import Image from 'next/image'
 
-import { withLayout } from '@/layout'
-import { Button, Htag, UploadableAvatar } from '@/components'
+import {} from '@/layouts/MainLayout'
+import { Button, Htag, P } from '@/ui-kit'
 import { Cover, Upload } from '@/public/assets/icons'
 import Head from 'next/head'
 
 import styles from './Owner.module.css'
+import { UploadableAvatar } from '@/components'
+import { withPrivateLayout } from '@/layouts/PrivateLayout'
 
 const fullname = 'Владислав'
 
 const Owner = (): JSX.Element => {
-	const handleImageUpload = (image: File) => {
+	const handleImageUpload = (image: File): void => {
 		console.log('Image uploaded:', image)
 		// send the image to the server, etc.
 	}
@@ -31,31 +33,33 @@ const Owner = (): JSX.Element => {
 					</Button>
 				</header>
 				<main className={styles.main}>
-					<div className={styles.wrapper}>
-						<div className={styles.avatar}>
-							<UploadableAvatar fullname={fullname} size='large' upload onImageUpload={handleImageUpload} />
-						</div>
-						<div className={styles.personalInfo}>
-							<Htag tag='h2'>{fullname}</Htag>
-							<span className={styles.email}>example@gmail.com</span>
-							<div className={styles.edit}>
-								<Button appearance='secondary' size='small' className={styles.button}>
-									<Image src={'/assets/icons/pen.svg'} width='20' height='20' alt='Edit' />
-									<span>Редактировать</span>
-								</Button>
-							</div>
-							<p className={styles.about}>
-								Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить
-								макеты или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь
-								показать наличие самого текста или продемонстрировать типографику в деле.
-							</p>
-						</div>
-						<div className={styles.signout}>
+					<div className={styles.avatar}>
+						<UploadableAvatar fullname={fullname} size='large' upload onImageUpload={handleImageUpload} />
+					</div>
+					<div className={styles.info}>
+						<Htag tag='h2' className={styles.name}>
+							{fullname}
+						</Htag>
+						<P size='m' className={styles.email}>
+							example@gmail.com
+						</P>
+						<div className={styles.edit}>
 							<Button appearance='secondary' size='small' className={styles.button}>
-								<Image src={'/assets/icons/signout.svg'} width='20' height='20' alt='Sign Out' />
-								<span>Выйти</span>
+								<Image src={'/assets/icons/pen.svg'} width='20' height='20' alt='Edit' />
+								<span>Редактировать</span>
 							</Button>
 						</div>
+					</div>
+					<P size='s' className={styles.description}>
+						Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты
+						или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать
+						наличие самого текста или продемонстрировать типографику в деле.
+					</P>
+					<div className={styles.signout}>
+						<Button appearance='secondary' size='small' className={styles.button}>
+							<Image src={'/assets/icons/signout.svg'} width='20' height='20' alt='Sign Out' />
+							<span>Выйти</span>
+						</Button>
 					</div>
 				</main>
 			</div>
@@ -63,4 +67,4 @@ const Owner = (): JSX.Element => {
 	)
 }
 
-export default withLayout(Owner)
+export default withPrivateLayout(Owner)

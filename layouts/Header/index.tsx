@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Avatar, Button } from '../../components'
-
 import { HeaderProps } from './Header.props'
 import styles from './Header.module.css'
 import cn from 'classnames'
+import { Avatar, Button, P } from '@/ui-kit'
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	const name = 'Владислав'
@@ -16,7 +15,9 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 			<Link href='/accounts'>
 				<Image className={styles.logo} src='/yoldi.svg' alt='Yoldi Logo' width={80} height={50} priority />
 			</Link>
-			<p className={styles.motto}>Разрабатываем и запускаяем сложные веб проекты</p>
+			<P size='s' className={styles.motto}>
+				Разрабатываем и запускаяем сложные веб проекты
+			</P>
 
 			<div className={styles.userGroup}>
 				{isLogged ? (
