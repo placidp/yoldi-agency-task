@@ -8,13 +8,11 @@ import { FunctionComponent } from 'react'
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
 	return (
-		<>
-			<Header />
-			<div className={styles.root}>
-				<div className={styles.content}>{children}</div>
-			</div>
-			<Footer />
-		</>
+		<div className={styles.wrapper}>
+			<Header className={styles.header} />
+			<div className={styles.body}>{children}</div>
+			<Footer className={styles.footer} />
+		</div>
 	)
 }
 

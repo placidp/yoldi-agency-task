@@ -1,9 +1,0 @@
-.root {
-	border: var(--border-radius) solid var(--white-3);
-}
-
-.wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}

@@ -1,13 +1,14 @@
-import { FC, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { FooterProps } from './Footer.props'
 import styles from './Footer.module.css'
+import cn from 'classnames'
 
-export const Footer = (): JSX.Element => {
-	const [mock, setMock] = useState(true)
+export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
+	const mock = true
 	return (
-		<footer className={styles.root}>
+		<footer className={cn(className, styles.footer)} {...props}>
 			<div className={styles.wrapper}>
 				{mock ? (
 					<p>
