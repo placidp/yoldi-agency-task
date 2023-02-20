@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef, ChangeEvent } from 'react'
+import React, { useState, useRef } from 'react'
 
 import Camera from '../../public/assets/icons/camera.svg'
 
@@ -8,7 +8,7 @@ interface UploadImageProps {
 	show: boolean
 }
 
-export const UploadImage: FC<UploadImageProps> = ({ show }) => {
+export const UploadImage = ({ show }: UploadImageProps): JSX.Element => {
 	const filePicker = useRef<HTMLInputElement>(null)
 	const [selectedFile, setSelectedFile] = useState<File | null>(null)
 

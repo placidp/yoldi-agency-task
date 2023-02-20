@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { useState } from 'react'
 
-import { LayoutWithFooter } from '@/layouts/LayoutWithFooter'
 import { RegisterForm } from '@/components'
 
 import styles from './Register.module.css'
+import { withLayout } from '@/layout'
 
 const Register = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -17,13 +17,11 @@ const Register = () => {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<LayoutWithFooter>
-				<div className={styles.root}>
-					<RegisterForm setIsLoading={setIsLoading} />
-				</div>
-			</LayoutWithFooter>
+			<div className={styles.root}>
+				<RegisterForm setIsLoading={setIsLoading} />
+			</div>
 		</>
 	)
 }
 
-export default Register
+export default withLayout(Register)

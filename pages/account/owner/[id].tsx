@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
-import { MainLayout } from '@/layouts/MainLayout'
+import { withLayout } from '@/layout'
 import { Button, UploadableAvatar } from '@/components'
 import { Cover, Upload } from '@/public/assets/icons'
+import Head from 'next/head'
 
 import styles from './Owner.module.css'
-import { useState } from 'react'
 
 const fullname = 'Владислав'
 
@@ -16,7 +16,12 @@ const Owner = (): JSX.Element => {
 	}
 
 	return (
-		<MainLayout>
+		<>
+			<Head>
+				<title>Yoldi Account Owner</title>
+				<meta name='description' content='Разрабатываем и запускаяем сложные веб проекты' />
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+			</Head>
 			<div className={styles.root}>
 				<header className={styles.cover}>
 					<Button appearance='secondary' size='small' className={`${styles.button} ${styles.buttonCover}`}>
@@ -54,8 +59,8 @@ const Owner = (): JSX.Element => {
 					</div>
 				</main>
 			</div>
-		</MainLayout>
+		</>
 	)
 }
 
-export default Owner
+export default withLayout(Owner)

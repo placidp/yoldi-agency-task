@@ -1,15 +1,18 @@
+import { withLayout } from '@/layout'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
 	const router = useRouter()
 
 	useEffect(() => {
 		const { pathname } = router
 		if (pathname === '/') {
-			router.push('/accounts-list/1')
+			router.push('/accounts')
 		}
 	}, [router])
 
 	return <></>
 }
+
+export default withLayout(Home)

@@ -9,7 +9,7 @@ import AvatarImage from '@/components/AvatarImage'
 export interface AvatarProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
 	fullname: string
 	size: 'small' | 'large'
-	upload: boolean
+	upload?: boolean
 }
 
 export const Avatar = ({ fullname, size, upload, ...props }: AvatarProps): JSX.Element => {

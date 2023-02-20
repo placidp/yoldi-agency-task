@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from 'react'
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
 import styles from './Button.module.css'
 import cn from 'classnames'
 
@@ -8,7 +8,7 @@ interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 	children: ReactNode
 }
 
-export const Button: FC<ButtonProps> = ({ appearance, size, children, className, ...props }) => {
+export const Button = ({ appearance, size, children, className, ...props }: ButtonProps): JSX.Element => {
 	return (
 		<button
 			disabled={appearance === 'disabled'}

@@ -1,32 +1,26 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 
 import { LoginForm } from '@/components'
-import { LayoutWithFooter } from '@/layouts/LayoutWithFooter'
+import { withLayout } from '@/layout'
 
 import styles from './Login.module.css'
 import Head from 'next/head'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface LoginProps {}
-
-const Login: FC<LoginProps> = () => {
+const Login = (): JSX.Element => {
 	const [isLoading, setIsLoading] = useState(false)
 
 	return (
 		<>
 			<Head>
-				<title>Yoldi Регистрация</title>
+				<title>Yoldi Вход</title>
 				<meta name='description' content='Разрабатываем и запускаяем сложные веб проекты' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<LayoutWithFooter>
-				<div className={styles.root}>
-					<LoginForm setIsLoading={setIsLoading} />
-				</div>
-			</LayoutWithFooter>
+			<div className={styles.root}>
+				<LoginForm setIsLoading={setIsLoading} />
+			</div>
 		</>
 	)
 }
 
-export default Login
+export default withLayout(Login)
