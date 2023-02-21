@@ -3,11 +3,6 @@
 	grid-template-rows: 200px auto;
 }
 
-@media (max-width: 765px) {
-	.root {
-	}
-}
-
 .cover {
 	display: grid;
 	place-items: center;
@@ -30,54 +25,16 @@
 
 	display: grid;
 	justify-self: center;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas:
-		'info . edit'
-		'description description .'
-		'signout .';
 
 	row-gap: 30px;
-	margin-bottom: 30px;
+	padding-top: 85px;
+	padding-bottom: 30px;
 }
 
-@media (max-width: 765px) {
-	.main {
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			'info'
-			'description'
-			'signout';
-	}
-}
-
-.info {
-	grid-area: info;
-
-	margin-top: 85px;
-	display: grid;
-	row-gap: 10px;
-}
-
-.description {
-	grid-area: description;
-
-	margin-bottom: 30px;
-}
-.signout {
-	grid-area: signout;
-}
-
-.name {
-}
-
+/* should move these styles */
 .email {
 	color: var(--grey-3);
 }
-
-.edit {
-}
-
-/* should move these styles into Button Component */
 
 .button {
 	display: flex;

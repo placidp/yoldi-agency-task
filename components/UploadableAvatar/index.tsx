@@ -35,7 +35,7 @@ export const UploadableAvatar = ({ fullname, size, onImageUpload, ...props }: Up
 
 	return (
 		<>
-			<Avatar fullname={fullname} size={size} {...props} onClick={handleAvatarClick}></Avatar>
+			<Avatar data-show={true} fullname={fullname} size={size} {...props} onClick={handleAvatarClick}></Avatar>
 			<input type='file' accept='image/*' ref={inputFileRef} onChange={handleImageUpload} style={{ display: 'none' }} />
 		</>
 	)

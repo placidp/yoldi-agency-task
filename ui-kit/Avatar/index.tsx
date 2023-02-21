@@ -14,6 +14,7 @@ export interface AvatarProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTML
 
 export const Avatar = ({ className, fullname, size, upload, ...props }: AvatarProps): JSX.Element => {
 	const imgUrl = ''
+	const [hovered, setHovered] = useState(false)
 
 	return (
 		<button
@@ -21,9 +22,16 @@ export const Avatar = ({ className, fullname, size, upload, ...props }: AvatarPr
 				[styles.small]: size == 'small',
 				[styles.large]: size == 'large',
 				[styles.uploadImage]: upload,
+				[styles.hovered]: hovered,
 			})}
+			onMouseEnter={() => setHovered(true)}
+			onMouseLeave={() => setHovered(false)}
 			{...props}>
-			{imgUrl ? <AvatarImage size={size} /> : <Initials fullname={fullname} />}
+			{imgUrl && !hovered ? (
+				<AvatarImage size={size} imgUrl={imgUrl} />
+			) : (
+				<Initials className={styles.initials} fullname={fullname} />
+			)}
 		</button>
 	)
 }

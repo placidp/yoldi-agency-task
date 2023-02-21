@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const AvatarImage = ({ size }) => {
+const AvatarImage = ({ imgUrl, size }) => {
 	return (
 		<Image
 			src={`/assets/avatars/vladislav-${size}.png`}

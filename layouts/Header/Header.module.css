@@ -16,7 +16,8 @@
 	}
 }
 
-.logo {
+.logoLink {
+	line-height: 0;
 	margin: 15px 20px;
 }
 
@@ -26,8 +27,4 @@
 	display: grid;
 	grid-template-columns: auto 1fr;
 	align-items: center;
-}
-
-.avatar {
-	margin: 15px 29.5px 15px 20px;
 }

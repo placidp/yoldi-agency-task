@@ -26,7 +26,16 @@
 	font-size: 36px;
 }
 
-.uploadImage:hover {
+/* .uploadImage:hover {
+	cursor: pointer;
+	background-color: var(--black);
+	background-image: url('/assets/icons/camera.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: animatedBackground 0.2s;
+} */
+
+.root.hovered {
 	cursor: pointer;
 	background-color: var(--black);
 	background-image: url('/assets/icons/camera.svg');
@@ -35,9 +44,28 @@
 	animation: animatedBackground 0.2s;
 }
 
+.root.hovered .initials,
+.root.hovered .avatar-image {
+	display: none;
+}
+
+.initials {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.initials.hidden {
+	opacity: 0;
+}
+.initials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
 @keyframes animatedBackground {
 	from {
-		background-position: 50% 0;
+		background-position: 50% 100%;
 	}
 	to {
 		background-position: 50% 50%;

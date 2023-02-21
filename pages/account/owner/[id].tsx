@@ -36,19 +36,17 @@ const Owner = (): JSX.Element => {
 					<div className={styles.avatar}>
 						<UploadableAvatar fullname={fullname} size='large' upload onImageUpload={handleImageUpload} />
 					</div>
-					<div className={styles.info}>
-						<Htag tag='h2' className={styles.name}>
-							{fullname}
-						</Htag>
-						<P size='m' className={styles.email}>
-							example@gmail.com
-						</P>
-						<div className={styles.edit}>
-							<Button appearance='secondary' size='small' className={styles.button}>
-								<Image src={'/assets/icons/pen.svg'} width='20' height='20' alt='Edit' />
-								<span>Редактировать</span>
-							</Button>
-						</div>
+					<Htag className={styles.name} tag='h2'>
+						{fullname}
+					</Htag>
+					<P size='m' className={styles.email}>
+						example@gmail.com
+					</P>
+					<div className={styles.edit}>
+						<Button appearance='secondary' size='small' className={styles.button}>
+							<Image src={'/assets/icons/pen.svg'} width='20' height='20' alt='Edit' />
+							<span>Редактировать</span>
+						</Button>
 					</div>
 					<P size='s' className={styles.description}>
 						Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты
