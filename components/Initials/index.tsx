@@ -5,10 +5,10 @@ import cn from 'classnames'
 
 interface InitialsProps {
 	fullname: string
-	hidden: boolean
+	className?: string
 }
 
-export const Initials = ({ fullname, hidden, className }: InitialsProps): JSX.Element => {
+export const Initials = ({ fullname, className }: InitialsProps): JSX.Element => {
 	const getInitials = useCallback(
 		(name: string): string => {
 			return name
@@ -19,12 +19,5 @@ export const Initials = ({ fullname, hidden, className }: InitialsProps): JSX.El
 		[fullname],
 	)
 
-	return (
-		<div
-			className={cn(className, styles.initials, {
-				[styles.hidden]: hidden,
-			})}>
-			{getInitials(fullname)}
-		</div>
-	)
+	return <div className={cn(styles.initials, className)}>{getInitials(fullname)}</div>
 }

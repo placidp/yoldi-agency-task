@@ -33,3 +33,9 @@
 .button {
 	margin: 25px 30px 30px;
 }
+
+@media (max-width: 565px) {
+	.title {
+		align-self: initial;
+	}
+}

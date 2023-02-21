@@ -21,7 +21,7 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
 						<Link href={'/register'}>Зарегистрироваться</Link>
 					</p>
 				)} */}
-				<P size='s'>
+				<P size='s' style={{ textAlign: 'center' }}>
 					<span className='text-gray'>Еще нет аккаунта? </span>
 					<Link href={'/register'}>Зарегистрироваться</Link>
 					{' / '}

@@ -1,4 +1,4 @@
-import { withLayout } from '@/layouts/MainLayout'
+import { withMainLayout } from '@/layouts/MainLayout'
 import Head from 'next/head'
 
 import styles from './Guest.module.css'
@@ -15,4 +15,4 @@ const Guest = (): JSX.Element => {
 	)
 }
 
-export default withLayout(Guest)
+export default withMainLayout(Guest)

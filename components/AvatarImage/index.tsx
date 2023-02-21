@@ -1,15 +1,19 @@
 import Image from 'next/image'
-import React from 'react'
 
-const AvatarImage = ({ imgUrl, size }) => {
+interface AvatarImageProps {
+	className: string
+	src: string
+	size: string
+}
+
+export const AvatarImage = ({ className, src, size }: AvatarImageProps): JSX.Element => {
 	return (
 		<Image
-			src={`/assets/avatars/vladislav-${size}.png`}
+			className={className}
+			src={src}
 			width={size === 'large' ? '100' : '50'}
 			height={size === 'large' ? '100' : '50'}
 			alt={'Avatar Image'}
 		/>
 	)
 }
-
-export default AvatarImage

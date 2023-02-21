@@ -52,3 +52,9 @@
 	background-color: var(--grey-1);
 	cursor: not-allowed;
 }
+
+@media (max-width: 565px) {
+	.large {
+		width: var(--button-large-width-mobile);
+	}
+}

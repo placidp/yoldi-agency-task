@@ -9,9 +9,8 @@ import cn from 'classnames'
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	const name = 'Владислав'
 	const isLogged = true
-	const handleKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>): void => {
 		if (e.code === 'Space') {
-			// 32 is the key code for spacebar
 			e.preventDefault()
 			e.currentTarget.click()
 		}
@@ -35,7 +34,14 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 							href={'/account/owner/1'}
 							onKeyDown={handleKeyDown}
 							tabIndex={-1}>
-							<Avatar className={styles.avatar} size='small' fullname={name} />
+							<Avatar
+								className={styles.avatar}
+								size='small'
+								fullname={name}
+								src=''
+								uploadable={false}
+								src='/assets/avatars/vladislav-small.png'
+							/>
 						</Link>
 					</>
 				) : (

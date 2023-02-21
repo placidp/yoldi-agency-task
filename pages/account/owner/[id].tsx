@@ -1,13 +1,11 @@
 import Image from 'next/image'
-
-import {} from '@/layouts/MainLayout'
 import { Button, Htag, P } from '@/ui-kit'
 import { Cover, Upload } from '@/public/assets/icons'
 import Head from 'next/head'
 
 import styles from './Owner.module.css'
 import { UploadableAvatar } from '@/components'
-import { withPrivateLayout } from '@/layouts/PrivateLayout'
+import { withMainLayout } from '@/layouts/MainLayout'
 
 const fullname = 'Владислав'
 
@@ -34,7 +32,7 @@ const Owner = (): JSX.Element => {
 				</header>
 				<main className={styles.main}>
 					<div className={styles.avatar}>
-						<UploadableAvatar fullname={fullname} size='large' upload onImageUpload={handleImageUpload} />
+						<UploadableAvatar fullname={fullname} size='large' uploadable src='/assets/avatars/vladislav-large.png' />
 					</div>
 					<Htag className={styles.name} tag='h2'>
 						{fullname}
@@ -65,4 +63,4 @@ const Owner = (): JSX.Element => {
 	)
 }
 
-export default withPrivateLayout(Owner)
+export default withMainLayout(Owner)

@@ -26,15 +26,6 @@
 	font-size: 36px;
 }
 
-/* .uploadImage:hover {
-	cursor: pointer;
-	background-color: var(--black);
-	background-image: url('/assets/icons/camera.svg');
-	background-repeat: no-repeat;
-	background-position: center;
-	animation: animatedBackground 0.2s;
-} */
-
 .root.hovered {
 	cursor: pointer;
 	background-color: var(--black);
@@ -51,18 +42,22 @@
 
 .initials {
 	opacity: 1;
-	transition: opacity 0.3s ease-in-out;
-}
-
-.initials.hidden {
-	opacity: 0;
-}
-.initials {
+	transition: opacity 0.2s;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
 }
+
+.initials.hidden {
+	opacity: 0;
+}
+
+.avatarImage:hover {
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
 @keyframes animatedBackground {
 	from {
 		background-position: 50% 100%;

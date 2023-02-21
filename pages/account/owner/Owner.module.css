@@ -12,6 +12,14 @@
 	background-color: var(--white-2);
 }
 
+.buttonCover {
+	opacity: 0;
+}
+
+.cover:hover .buttonCover {
+	opacity: 1;
+}
+
 .avatar {
 	position: absolute;
 	top: -50px;
