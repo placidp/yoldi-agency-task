@@ -1,4 +1,4 @@
-import { withLayout } from '@/layout'
+import { withMainLayout } from '@/layouts/MainLayout'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
@@ -15,4 +15,4 @@ function Home(): JSX.Element {
 	return <></>
 }
 
-export default withLayout(Home)
+export default withMainLayout(Home)

@@ -7,9 +7,9 @@ import { Header, Footer } from '@/layouts'
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
 	return (
-		<div className={cn(styles.wrapper)}>
+		<div className={styles.wrapper}>
 			<Header className={styles.header} />
-			<div className={cn(styles.body)}>{children}</div>
+			<div className={styles.body}>{children}</div>
 			<Footer className={styles.footer} />
 		</div>
 	)

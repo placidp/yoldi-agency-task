@@ -33,7 +33,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 							style={{ margin: '15px 29.5px 15px 20px' }}
 							href={'/account/owner/1'}
 							onKeyDown={handleKeyDown}
-							tabIndex={-1}>
+							tabIndex={0}>
 							<Avatar
 								className={styles.avatar}
 								size='small'
